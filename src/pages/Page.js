@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
-const apiPLN = 'https://api.exchangeratesapi.io/latest?base=PLN';
-const apiEUR = 'https://api.exchangeratesapi.io/latest?base=EUR';
+// const apiPLN = 'https://api.exchangeratesapi.io/latest?base=PLN';
+// const apiEUR = 'https://api.exchangeratesapi.io/latest?base=EUR';
 
 
 class Page extends Component {
@@ -11,6 +11,7 @@ class Page extends Component {
         currencyValue1:"PLN",
         currencyValue2:"EUR",
         inputValue:"",
+        inputValueAsync:"",
 
     }
 
@@ -19,24 +20,20 @@ class Page extends Component {
 
 
     handleCalc = () => {
-        let pln = this.state.currency.rates.PLN;
-        let eur = this.state.currency.rates.EUR;
-        const inputValue = this.state.inputValue;
+        const {inputValue,currencyValue2} = this.state;
+
+        const currency2 = currencyValue2;
+        const currency = this.state.currency.rates[currency2];
+
+        const result = currency * inputValue;
+
+        this.setState({
+            result: result.toFixed(2),
+            inputValueAsync:inputValue,
+
+            
+        })
         
-        if(this.state.currencyValue1 === "PLN"){
-            let result = inputValue * eur;
-            this.setState({
-            result:result.toFixed(2),
-        })
-        }else{
-            let result = inputValue * pln;
-            this.setState({
-            result:result.toFixed(2),
-        })
-        }
-
-        // const result = inputValue * eur;
-
     
     }
 
@@ -46,10 +43,18 @@ class Page extends Component {
         })
     }
 
-    handleChange = (e) => {
+    handleChangeValue1 = (e) => {
         this.setState({
             currencyValue1:e.target.value,
             result:"",
+            inputValueAsync:"",
+        })
+    }
+    handleChangeValue2 = (e) => {
+        this.setState({
+            currencyValue2:e.target.value,
+            result:"",
+            inputValueAsync:"",
         })
     }
 
@@ -83,14 +88,26 @@ class Page extends Component {
         return(
             <div>
                 
-                <select onChange={this.handleChange}>
+                <select onChange={this.handleChangeValue1}>
                     <option value="PLN">PLN</option>
                     <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="USD">USD</option>
+                    <option value="CHF">CHF</option>
+                </select>
+                <input type="number" onChange={this.handleValueChange}/>
+                <select onChange={this.handleChangeValue2} defaultValue="EUR">
+                    <option value="PLN">PLN</option>
+                    <option key="EUR" value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="USD">USD</option>
+                    <option value="CHF">CHF</option>
+
                 </select>
 
-                <input type="number" onChange={this.handleValueChange}/>
+                
                 <button onClick={this.handleCalc}>Ile to jest?</button>
-                <h1>{this.state.result} {this.state.currencyValue1 !== "PLN" ? 'PLN':'EUR'}</h1>
+                <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? "to jest":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
             </div>
             
         )
