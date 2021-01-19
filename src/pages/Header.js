@@ -1,8 +1,11 @@
 import React from 'react';
+import '../styles/Header.css'
 
 const Header = () => {
     return ( 
-        <h1>Header</h1>
+        <header>
+            Currency calculator
+        </header>
      );
 }
  

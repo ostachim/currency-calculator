@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import '../styles/Page.css'
 
 // const apiPLN = 'https://api.exchangeratesapi.io/latest?base=PLN';
 // const apiEUR = 'https://api.exchangeratesapi.io/latest?base=EUR';
@@ -86,28 +87,28 @@ class Page extends Component {
 
     render(){
         return(
-            <div>
+            <div className="converter">
+                <div className="form">
+                    <select onChange={this.handleChangeValue1}>
+                        <option value="PLN">PLN</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="USD">USD</option>
+                        <option value="CHF">CHF</option>
+                    </select>
+                    <input type="number" onChange={this.handleValueChange}/>
+                    <select onChange={this.handleChangeValue2} defaultValue="EUR">
+                        <option value="PLN">PLN</option>
+                        <option key="EUR" value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                        <option value="USD">USD</option>
+                        <option value="CHF">CHF</option>
+                    </select><button onClick={this.handleCalc}>></button>
+                </div>
+                <div className="resultTable">
+                    <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? "to jest":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
+                </div>
                 
-                <select onChange={this.handleChangeValue1}>
-                    <option value="PLN">PLN</option>
-                    <option value="EUR">EUR</option>
-                    <option value="GBP">GBP</option>
-                    <option value="USD">USD</option>
-                    <option value="CHF">CHF</option>
-                </select>
-                <input type="number" onChange={this.handleValueChange}/>
-                <select onChange={this.handleChangeValue2} defaultValue="EUR">
-                    <option value="PLN">PLN</option>
-                    <option key="EUR" value="EUR">EUR</option>
-                    <option value="GBP">GBP</option>
-                    <option value="USD">USD</option>
-                    <option value="CHF">CHF</option>
-
-                </select>
-
-                
-                <button onClick={this.handleCalc}>Ile to jest?</button>
-                <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? "to jest":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
             </div>
             
         )

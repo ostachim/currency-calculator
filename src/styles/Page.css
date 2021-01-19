@@ -1,0 +1,63 @@
+
+.converter{
+    background-color:#222;
+    height:40vh;
+    width:80vw;
+    margin: 40px auto;
+    border-radius: 20px 20px 0 0;
+    border-bottom:5px solid #444;
+    
+}
+
+.converter .form input{
+    width:15vw;
+    height:4vw;
+    border-radius:10px;
+    border:0px solid black;
+    font-size:30px;
+    margin:0 0px;
+    /* position:relative; */
+}
+
+.form{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    width:75vw;
+    margin:40px auto;
+}
+
+.form p{
+    /* position:absolute; */
+    color:white;
+}
+
+.resultTable{
+    position:absolute;
+    top:40vh;
+    left:50%;
+    transform:translate(-50%);
+    font-size:20px;
+    color:white;
+
+}
+
+
+
+.converter .form select {
+    width:15vw;
+    height:4vw;
+    border-radius:10px;
+    border:0px solid black;
+    font-size:30px;
+    margin:0 10px;
+}
+
+.converter .form button {
+    width:15vw;
+    height:4vw;
+    border-radius:10px;
+    border:0px solid black;
+    font-size:30px;
+    margin:0 10px; 
+}
