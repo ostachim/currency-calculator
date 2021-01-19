@@ -89,6 +89,13 @@ class Page extends Component {
         return(
             <div className="converter">
                 <div className="form">
+                    <label>
+                        Amount
+                    </label>
+                    <input type="number" onChange={this.handleValueChange}/>
+                    <label>
+                        From
+                    </label>
                     <select onChange={this.handleChangeValue1}>
                         <option value="PLN">PLN</option>
                         <option value="EUR">EUR</option>
@@ -96,14 +103,17 @@ class Page extends Component {
                         <option value="USD">USD</option>
                         <option value="CHF">CHF</option>
                     </select>
-                    <input type="number" onChange={this.handleValueChange}/>
+                    <label>
+                        To
+                    </label>
                     <select onChange={this.handleChangeValue2} defaultValue="EUR">
                         <option value="PLN">PLN</option>
                         <option key="EUR" value="EUR">EUR</option>
                         <option value="GBP">GBP</option>
                         <option value="USD">USD</option>
                         <option value="CHF">CHF</option>
-                    </select><button onClick={this.handleCalc}>></button>
+                    </select>
+                    <button onClick={this.handleCalc}>Convert</button>
                 </div>
                 <div className="resultTable">
                     <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? " = ":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
