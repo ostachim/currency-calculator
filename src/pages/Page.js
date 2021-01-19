@@ -106,9 +106,9 @@ class Page extends Component {
                     </select><button onClick={this.handleCalc}>></button>
                 </div>
                 <div className="resultTable">
-                    <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? "to jest":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
+                    <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? " = ":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
                 </div>
-                
+                <p>updated in {this.state.currency.date}</p>
             </div>
             
         )

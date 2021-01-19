@@ -19,12 +19,19 @@
     /* position:relative; */
 }
 
+.converter p {
+    position:absolute;
+    color:white;
+    right:12vw;
+    top:50vh;
+}
+
 .form{
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-    width:75vw;
-    margin:40px auto;
+    width:65vw;
+    margin:70px auto;
 }
 
 .form p{
