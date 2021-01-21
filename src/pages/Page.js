@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import '../styles/Page.css'
-
+import '../styles/Page.css';
+import PolishFlag from '../flags/flag_pln.png';
 // const apiPLN = 'https://api.exchangeratesapi.io/latest?base=PLN';
 // const apiEUR = 'https://api.exchangeratesapi.io/latest?base=EUR';
 
@@ -11,7 +11,7 @@ class Page extends Component {
         result:"",
         currencyValue1:"PLN",
         currencyValue2:"EUR",
-        inputValue:"",
+        inputValue:1,
         inputValueAsync:"",
 
     }
@@ -59,6 +59,20 @@ class Page extends Component {
         })
     }
 
+    handleChangeCurrencies = () => {
+        const currency1 = this.state.currencyValue1;
+        const currency2 = this.state.currencyValue2;
+
+        this.setState({
+            currencyValue1: currency2,
+            currencyValue2: currency1,
+            result:"",
+            inputValueAsync:"",
+        })
+        
+
+    }
+
     componentDidMount(){
         fetch(this.API)
         .then(response => response.json())
@@ -92,26 +106,47 @@ class Page extends Component {
                     <label>
                         Amount
                     </label>
-                    <input type="number" onChange={this.handleValueChange}/>
+                    <input type="number" value={this.state.inputValue} onChange={this.handleValueChange}/>
                     <label>
                         From
                     </label>
-                    <select onChange={this.handleChangeValue1}>
-                        <option value="PLN">PLN</option>
-                        <option value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
-                        <option value="USD">USD</option>
-                        <option value="CHF">CHF</option>
+                    <select onChange={this.handleChangeValue1} id="currency1" defaultValue={this.state.currencyValue1}>
+                        <option value="PLN">
+                            PLN
+                        </option>
+                        <option value="EUR">EUR
+                        
+                        </option>
+                        <option value="GBP">GBP
+                        
+                        </option>
+                        <option value="USD">USD
+                        
+                        </option>
+                        <option value="CHF">CHF
+                        
+                        </option>
                     </select>
+                    
+                    <button onClick={this.handleChangeCurrencies} className="arrows">⇄</button>
+
                     <label>
                         To
                     </label>
-                    <select onChange={this.handleChangeValue2} defaultValue="EUR">
-                        <option value="PLN">PLN</option>
+                    <select onChange={this.handleChangeValue2} defaultValue={this.state.currencyValue2}>
+                        <option key="PLN" value="PLN">PLN
+                        
+                        </option>
                         <option key="EUR" value="EUR">EUR</option>
-                        <option value="GBP">GBP</option>
-                        <option value="USD">USD</option>
-                        <option value="CHF">CHF</option>
+                        <option value="GBP">GBP
+                        
+                        </option>
+                        <option key="USD" value="USD">USD
+                        
+                        </option>
+                        <option key="CHF" value="CHF">CHF
+                        
+                        </option>
                     </select>
                     <button onClick={this.handleCalc}>Convert</button>
                 </div>
