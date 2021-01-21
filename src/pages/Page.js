@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/Page.css';
-import PolishFlag from '../flags/flag_pln.png';
+// import PolishFlag from '../flags/flag_gbr.png';
 // const apiPLN = 'https://api.exchangeratesapi.io/latest?base=PLN';
 // const apiEUR = 'https://api.exchangeratesapi.io/latest?base=EUR';
 
@@ -110,7 +110,8 @@ class Page extends Component {
                     <label>
                         From
                     </label>
-                    <select onChange={this.handleChangeValue1} id="currency1" defaultValue={this.state.currencyValue1}>
+                    
+                    <select onChange={this.handleChangeValue1} id="currency1" value={this.state.currencyValue1}>
                         <option value="PLN">
                             PLN
                         </option>
@@ -133,7 +134,7 @@ class Page extends Component {
                     <label>
                         To
                     </label>
-                    <select onChange={this.handleChangeValue2} defaultValue={this.state.currencyValue2}>
+                    <select onChange={this.handleChangeValue2} value={this.state.currencyValue2}>
                         <option key="PLN" value="PLN">PLN
                         
                         </option>
