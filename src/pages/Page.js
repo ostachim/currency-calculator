@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/Page.css';
+import '../styles/mobile.css';
 // import PolishFlag from '../flags/flag_gbr.png';
 // const apiPLN = 'https://api.exchangeratesapi.io/latest?base=PLN';
 // const apiEUR = 'https://api.exchangeratesapi.io/latest?base=EUR';
@@ -154,7 +155,7 @@ class Page extends Component {
                 <div className="resultTable">
                     <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? " = ":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
                 </div>
-                <p>updated in {this.state.currency.date}</p>
+                <p className="date">updated in {this.state.currency.date}</p>
             </div>
             
         )

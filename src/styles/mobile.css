@@ -1,0 +1,57 @@
+@media(max-width: 900px){
+    .converter .form button{
+        background-color:#D5A419;
+    }
+
+    
+    .converter .form input,.converter .form select,.converter .form button{
+        width:100%;
+        height:15%;
+        text-align:center;
+        margin-right:0;
+        margin-left:0;
+        margin-bottom:10px;
+    }
+
+    .form label{
+        display:none;
+    }
+
+    .converter{
+        height:400px;
+        /* position:relative; */
+    }
+
+    .resultTable{
+        top:65%;
+        /* width:100%; */
+       font-size:16px;
+       /* min-width:300px; */
+    }
+
+    .converter p {
+        position:absolute;
+        color:black;
+        right:15%;
+        top:82%;
+    }
+
+    .converter .form button.arrows{
+        position:absolute;
+        /* margin-left:0; */
+        right:-15px;
+        top:65px;
+    }
+
+
+}
+
+@media(max-width: 562px){
+    .converter{
+        width:90vw;
+    }
+    .resultTable{
+        max-width:150px;
+        
+    }
+}
