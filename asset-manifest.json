@@ -1,5 +1,5 @@
 {
-  "main.css": "/currency-calculator/static/css/main.5ae880e7.chunk.css",
+  "main.css": "/currency-calculator/static/css/main.35793532.chunk.css",
   "main.js": "/currency-calculator/static/js/main.586a9778.chunk.js",
   "main.js.map": "/currency-calculator/static/js/main.586a9778.chunk.js.map",
   "runtime~main.js": "/currency-calculator/static/js/runtime~main.a8f5e66f.js",
@@ -7,7 +7,7 @@
   "static/js/2.32a94c25.chunk.js": "/currency-calculator/static/js/2.32a94c25.chunk.js",
   "static/js/2.32a94c25.chunk.js.map": "/currency-calculator/static/js/2.32a94c25.chunk.js.map",
   "index.html": "/currency-calculator/index.html",
-  "precache-manifest.1968f02b443699d66731b490f407cd4c.js": "/currency-calculator/precache-manifest.1968f02b443699d66731b490f407cd4c.js",
+  "precache-manifest.eaa6a2a4d79c030b71b7046cdf7ba5f8.js": "/currency-calculator/precache-manifest.eaa6a2a4d79c030b71b7046cdf7ba5f8.js",
   "service-worker.js": "/currency-calculator/service-worker.js",
-  "static/css/main.5ae880e7.chunk.css.map": "/currency-calculator/static/css/main.5ae880e7.chunk.css.map"
+  "static/css/main.35793532.chunk.css.map": "/currency-calculator/static/css/main.35793532.chunk.css.map"
 }
