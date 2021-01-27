@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/currency-calculator/precache-manifest.403678c2e76e30192d811f684b2357e3.js"
+  "/currency-calculator/precache-manifest.1968f02b443699d66731b490f407cd4c.js"
 );
 
 workbox.clientsClaim();
