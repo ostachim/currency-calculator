@@ -155,7 +155,7 @@ class Page extends Component {
                 <div className="resultTable">
                     <h1>{this.state.inputValueAsync} {this.state.result !=="" ? this.state.currencyValue1:null} {this.state.result !=="" ? " = ":null} {this.state.result} {this.state.result !=="" ? this.state.currencyValue2:null}</h1>
                 </div>
-                <p className="date">updated in {this.state.currency.date}</p>
+                <p className="date">last updated in {this.state.currency.date}</p>
             </div>
             
         )

@@ -23,23 +23,26 @@
     }
 
     .resultTable{
-        top:65%;
         /* width:100%; */
        font-size:16px;
+       display:block;
+       width:270px;
+       top:430px;
+       transform:translateX(-50%)
        /* min-width:300px; */
     }
 
     .converter p {
         position:absolute;
-        color:black;
-        right:15%;
-        top:82%;
+        color:white;
+        right:120px;
+        top:525px;
     }
 
     .converter .form button.arrows{
         position:absolute;
         /* margin-left:0; */
-        right:-15px;
+        right:-25px;
         top:65px;
     }
 
@@ -50,8 +53,5 @@
     .converter{
         width:90vw;
     }
-    .resultTable{
-        max-width:150px;
-        
-    }
+    
 }
